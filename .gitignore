@@ -5,7 +5,6 @@
 __pycache__/
 .DS_Store
 *.pt
-*.pth
 venv*/
 dataset*/
 DeepGuardDB_v1*/
