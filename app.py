@@ -1,6 +1,7 @@
 import streamlit as st
 import torch
 import torch.nn as nn
+import os
 from torchvision import models, transforms
 from PIL import Image
 
@@ -21,7 +22,8 @@ def load_model():
     model = models.resnet50(pretrained=False)
     num_ftrs = model.fc.in_features
     model.fc = nn.Linear(num_ftrs, 2)
-    model.load_state_dict(torch.load(r"D:\Python ML\hackathon\real_fake_detector.pth", map_location=device))
+    MODEL_PATH = os.path.join(os.path.dirname(__file__), "real_fake_detector.pth")
+    model.load_state_dict(torch.load(MODEL_PATH, map_location=device))
     model.to(device)
     model.eval()
     return model
