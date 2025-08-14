@@ -1,0 +1,11 @@
+*.jpg
+*.png
+*.jpeg
+*.ipynb_checkpoints/
+__pycache__/
+.DS_Store
+*.pt
+*.pth
+venv*/
+dataset*/
+DeepGuardDB_v1*/
